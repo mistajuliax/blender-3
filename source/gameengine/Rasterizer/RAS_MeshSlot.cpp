@@ -56,7 +56,7 @@ RAS_MeshSlot::RAS_MeshSlot()
 	m_pDeformer(NULL),
 	m_pDerivedMesh(NULL),
 	m_meshUser(NULL),
-	m_batchIndex(-1)
+	m_batchPartIndex(-1)
 {
 }
 
@@ -77,7 +77,7 @@ RAS_MeshSlot::RAS_MeshSlot(const RAS_MeshSlot& slot)
 	m_pDeformer = NULL;
 	m_pDerivedMesh = NULL;
 	m_meshUser = NULL;
-	m_batchIndex = -1;
+	m_batchPartIndex = -1;
 	m_mesh = slot.m_mesh;
 	m_meshMaterial = slot.m_meshMaterial;
 	m_bucket = slot.m_bucket;
