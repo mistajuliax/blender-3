@@ -191,11 +191,7 @@ void RAS_MeshSlot::RunNode(const RAS_RenderNodeArguments& args)
 
 	RAS_IPolyMaterial *material = m_bucket->GetPolyMaterial();
 
-	if (args.m_shaderOverride) {
-		// Set cull face without activating the material.
-		rasty->SetCullFace(material->IsCullFace());
-	}
-	else {
+	if (!args.m_shaderOverride) {
 		bool uselights = material->UsesLighting(rasty);
 		rasty->ProcessLighting(uselights, args.m_trans);
 		material->ActivateMeshSlot(this, rasty);
