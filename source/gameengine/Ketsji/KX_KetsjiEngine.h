@@ -530,7 +530,7 @@ public:
 	void SetShowArmatures(bool show);
 
 	/// Draw camera frustum
-	void DrawCameraFrustum(KX_Camera *cam, KX_Scene *scene);
+	void DrawCameraFrustum(KX_Camera *cam, KX_Scene *scene, const RAS_Rect& viewport);
 
 	/// Allow debug armatures.
 	bool GetShowArmatures() const;
